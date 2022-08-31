@@ -360,7 +360,7 @@
             <dt>Repository</dt>
             <dd>
               <a
-                href="https://github.com/type-indexes"
+                href="https://github.com/solid/type-indexes"
                 rel="doap:repository"
                 >GitHub</a
               >
@@ -969,58 +969,6 @@
                 </p>
               </div>
             </section>
-          </section>
-
-          <section
-            id="discovering-complete-solid-profile"
-            inlist=""
-            rel="schema:hasPart"
-            resource="#discovering-complete-solid-profile"
-          >
-            <h2 property="schema:name">Discovering a complete Solid profile</h2>
-            <div datatype="rdf:HTML" property="schema:description">
-              <p>
-                It is possible to have all profile information in a single WebID
-                Profile Document, but a more likely situation is that some
-                information is in that document and some is in
-                <a href="#extended-profile">extended profile</a>
-                documents. With a couple of exceptions noted below, there is no
-                guarantee that any specific piece of data is located in a given
-                document. Therefore it is almost always best to load all profile
-                documents, to do so in a recommended order, and to treat the
-                <a href="#solid-profile">Solid Profile</a> as a graph assembled
-                by loading documents rather than as a set of documents.
-              </p>
-
-              <p>When an app wants to retrieve a complete profile, it SHOULD</p>
-              <ol>
-                <li>
-                  Load the WebID Profile Document reachable at the WebID URI.
-                </li>
-                <li>
-                  If the app is operating on behalf of the WebID owner, find a
-                  triple in that document with the WebID as subject and
-                  pim:preferencesFile as predicate, then load the object of that
-                  triple.
-                </li>
-                <li>
-                  Find all triples loaded so far that have the WebID as subject,
-                  and either <code>rdfs:seeAlso</code>,
-                  <code>solid:publicTypeIndex</code>, or
-                  <code>solid:privateTypeIndex</code> as predicate and load the
-                  objects of those triples.
-                </li>
-              </ol>
-              <p>
-                Once all of the accessible extended profile documents have been
-                loaded, the profile will consist of all statements with the
-                WebID as subject, regardless of which document the statements
-                occurred in. An app with only public permissions will see only
-                statements from publicly accessible extended profile documents
-                while other apps will see statements from public and also
-                private extended profile documents they have access to.
-              </p>
-            </div>
           </section>
 
           <section
