@@ -4,7 +4,7 @@
 
 Initially, Type Indexes were discussed and worked on together with the [WebId Profile Spec](https://github.com/solid/webid-profile). During this work we came to the conclusion to separate the index topic from the webId profile. The igniting issue is documented [here](https://github.com/solid/webid-profile/issues/35) and decision discussions were conducted at the WebID weekly meetings respectively [here](https://github.com/solid/webid-profile/blob/main/meetings/2022-08-23.md#separation-of-index-content) and [here](https://github.com/solid/webid-profile/blob/main/meetings/2022-08-30.md#separation-of-index-content).
 
-Further conversation on this work is discussed on the [WebId profile gitter chat](https://gitter.im/solid/webid-profile) and [weekly meetings](https://github.com/solid/webid-profile/tree/main/meetings). Feel free to open a GitIssue in this repo if you want to contribute or have a remark/improvement suggestion/concern.
+Further conversation on this work is discussed on the [WebId profile gitter chat](https://gitter.im/solid/webid-profile) and [weekly meetings](https://github.com/solid/webid-profile/tree/main/meetings). Feel free to [open a GitIssue](https://github.com/solid/type-indexes/issues/new) in this repo if you want to contribute or have a remark/improvement suggestion/concern.
 
 ## This Type Indexes spec is:
 ...first and foremost, trying to simply document what-is. This means, we are documenting how type indexes are implemented and used NOW.
