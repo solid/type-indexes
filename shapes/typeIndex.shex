@@ -8,6 +8,5 @@ typeIndex:TypeIndex EXTRA a {
 typeIndex:TypeRegistration EXTRA a {
     a [solid:TypeRegistration] ;
     solid:forClass IRI ;
-    solid:instanceContainer IRI ? ;
-    solid:instance IRI ?
+    ( solid:instanceContainer IRI | solid:instance IRI ) ; 
 }
