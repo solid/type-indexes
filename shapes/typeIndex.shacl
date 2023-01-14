@@ -7,7 +7,7 @@ PREFIX : <#>
     sh:scopeClass solid:ListedDocument, solid:UnlistedDocument, solid:TypeIndex .
 
 :TypeIndexShape a sh:NodeShape ;
-    sh:scopeClass solid:TypeRegistration ;
+    sh:targetClass solid:TypeRegistration ;
     sh:property [
         sh:predicate solid:forClass ;
         sh:nodeKind sh:IRI ;
