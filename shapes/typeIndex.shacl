@@ -9,7 +9,7 @@ PREFIX : <#>
 :TypeIndexShape a sh:NodeShape ;
     sh:targetClass solid:TypeRegistration ;
     sh:property [
-        sh:predicate solid:forClass ;
+        sh:path solid:forClass ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
