@@ -3,7 +3,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX solid: <http://www.w3.org/ns/solid/terms#>
 PREFIX : <#>
 
-:TypeIndexShape a sh:Shape ;
+:TypeIndexShape a sh:NodeShape ;
     sh:scopeClass solid:ListedDocument, solid:UnlistedDocument, solid:TypeIndex .
 
 :TypeRegistration a sh:Shape ;
