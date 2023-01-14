@@ -4,7 +4,7 @@ PREFIX solid: <http://www.w3.org/ns/solid/terms#>
 PREFIX : <#>
 
 :TypeIndexShape a sh:NodeShape ;
-    sh:scopeClass solid:ListedDocument, solid:UnlistedDocument, solid:TypeIndex .
+    sh:targetClass solid:ListedDocument, solid:UnlistedDocument, solid:TypeIndex .
 
 :TypeIndexShape a sh:NodeShape ;
     sh:targetClass solid:TypeRegistration ;
