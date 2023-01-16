@@ -20,6 +20,6 @@ PREFIX : <#>
             solid:instanceContainer 
         ) ] ;
         sh:nodeKind sh:IRI ;
-        sh:minCount 0 ;
+        sh:minCount 1 ;
         sh:maxCount 1 ;
     ] .    
