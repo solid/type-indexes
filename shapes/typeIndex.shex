@@ -2,7 +2,8 @@ PREFIX solid: <http://www.w3.org/ns/solid/terms#>
 PREFIX typeIndex: <#>
 
 typeIndex:TypeIndex EXTRA a {
-    a [solid:ListedDocument solid:TypeIndex]
+    a [solid:TypeIndex] ;
+    a [solid:ListedDocument]
 }
 
 typeIndex:TypeRegistration EXTRA a {
