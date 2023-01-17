@@ -3,7 +3,7 @@ PREFIX typeIndex: <#>
 
 typeIndex:TypeIndex EXTRA a {
     a [solid:TypeIndex] ;
-    a [solid:ListedDocument]
+    ( a [solid:ListedDocument] | a [solid:UnlistedDocument] )
 }
 
 typeIndex:TypeRegistration EXTRA a {
