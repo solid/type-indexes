@@ -6,7 +6,7 @@ PREFIX : <#>
 :TypeIndexShape a sh:NodeShape ;
     sh:targetClass solid:ListedDocument, solid:UnlistedDocument, solid:TypeIndex .
 
-:TypeIndexShape a sh:NodeShape ;
+:TypeRegistrationShape a sh:NodeShape ;
     sh:targetClass solid:TypeRegistration ;
     sh:property [
         sh:path solid:forClass ;
