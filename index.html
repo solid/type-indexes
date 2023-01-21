@@ -999,6 +999,28 @@
                   >] when, and only when, they appear in all capitals, as shown
                   here.
                 </p>
+
+                <p>
+                  Examples in this specification are introduced with the word "for example" or are set apart from the normative text with <pre><code>class="example"</code></pre>, like this:
+                  <figure
+                    class="example listing"
+                    id="example"
+                    rel="schema:hasPart"
+                    resource="#example"
+                  >
+                    <p class="example-h">
+                      <span>Example x</span>
+                    </p>
+                    <pre
+                      about="#example"
+                      property="schema:description"
+                      typeof="fabio:Script"
+                    >
+                      <code>This is an example.</code>
+                    </pre>
+                  </figure>
+
+                </p>
               </div>
             </section>
           </section>
@@ -1086,16 +1108,16 @@
                     rel="schema:hasPart"
                     resource="#public-type-index-example"
                   >
-                    <!-- TODO: https://github.com/solid/webid-profile/issues/19 -->
                     <p class="example-h">
-                      <span>Example</span>: Public Type Index that is a Linked
+                      <span>Example</span>: Public Type Index that is a Listed
                       Document.
                     </p>
                     <pre
                       about="#public-type-index-example"
                       property="schema:description"
                       typeof="fabio:Script"
-                    ><code>@prefix solid: &lt;http://www.w3.org/ns/solid/terms#&gt;.</code>
+                    >
+                    <code>@prefix solid: &lt;http://www.w3.org/ns/solid/terms#&gt;.</code>
 <code>@prefix vcard: &lt;http://www.w3.org/2006/vcard/ns#&gt;.</code>
 <code>@prefix bk: &lt;http://www.w3.org/2002/01/bookmark#&gt;.</code>
 <code></code>
