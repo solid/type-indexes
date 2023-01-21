@@ -15,11 +15,14 @@ PREFIX : <#>
         sh:maxCount 1 ;
     ] ;
     sh:property [
-        sh:path [ sh:alternativePath ( 
-            solid:instance 
-            solid:instanceContainer 
-        ) ] ;
+        sh:predicate solid:instanceContainer ;
+        sh:class ldp:Container ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:predicate solid:instance ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-    ] .    
+    ] .
