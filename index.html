@@ -768,6 +768,20 @@
                   </ol>
                 </li>
                 <li class="tocline">
+                  <a href="#considerations"
+                    ><span class="secno">3</span>
+                    <span class="content">Considerations</span></a
+                  >
+                  <ol>
+                    <li>
+                      <a class="tocxref" href="#privacy-considerations"
+                        ><span class="secno">3.1</span>
+                        <span class="content">Privacy Considerations</span></a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li class="tocline">
                   <a class="tocxref" href="#references">References</a>
                 </li>
               </ol>
@@ -790,29 +804,13 @@
             <div datatype="rdf:HTML" property="schema:description">
               <p><em>This section is non-normative.</em></p>
               <p>
-                In the Solid ecosystem Pods and clients are disconnected. This means clients are tight to data models. Furthermore, clients and thus Pods should be able to be connected in a network of knowledge. The connection is only achievable if the data itself is easy to be interconnected. 
+                In the Solid ecosystem, storages and clients are loosely coupled. This means clients are tight to data models. Furthermore, clients and thus Pods should be able to be connected in a network of knowledge. The connection is only achievable if the data itself is easy to be interconnected. 
 
                 This specification is written for Solid application developers as a solution that shows how to interconnect clients and data on Pods. This specification details the use of Type Indexes which were implemented already in different clients. Type Indexes offer a fine-grained approach to describing the location of specific types of resources on a Pod.
 
                 This specification is accompanied with shape documents, SHACL and ShEx, to help developers improve their implementations and maximize the promise of interconnected data. 
               </p>
             </div>
-
-            <section
-              id="terminology"
-              inlist=""
-              rel="schema:hasPart"
-              resource="#terminology"
-              typeof="skos:ConceptScheme"
-            >
-              <h3 property="schema:name skos:prefLabel">Out of scope</h3>
-              <div datatype="rdf:HTML" property="schema:description">
-                <p><em>This section is non-normative.</em></p>
-                <p>
-                  At the time of writing, there were considerations towards the information leak introduced with Type Indexes. Particularly, it is about the type of data a user has which is revealed to any client able to read the Type Indexes. These considerations are not addressed in this specification which we find entangled with the topic of  security in Solid.
-                </p>
-              </div>
-            </section>
 
             <section
               id="terminology"
@@ -1263,6 +1261,38 @@
               </section>
             </div>
           </section>
+
+          <section
+            id="considerations"
+            inlist=""
+            rel="schema:hasPart"
+            resource="#considerations"
+          >
+            <h2
+              about="#considerations"
+              property="schema:name"
+              typeof="skos:ConceptScheme"
+            >
+              Considerations
+            </h2>
+            
+              <section
+                  id="privacy-considerations"
+                  inlist=""
+                  rel="schema:hasPart"
+                  resource="#privacy-considerations"
+                  typeof="skos:ConceptScheme"
+              >
+                <h3 property="schema:name skos:prefLabel">Privacy Considerations</h3>
+                <div datatype="rdf:HTML" property="schema:description">
+                  <p><em>This section is non-normative.</em></p>
+                  <p>
+                    There are considerations towards the information leak introduced with Type Indexes. Particularly, it is about the type of data a user has which is revealed to any client able to read the Type Indexes. These considerations are not addressed in this specification which we find entangled with the topic of security in Solid.
+                  </p>
+                </div>
+              </section>
+              
+            </section>
 
           <section
             class="appendix"
