@@ -12,7 +12,7 @@ Further conversation on this work is discussed on the [WebId profile gitter chat
 We have taken into account the [initial proposal](https://github.com/solid/solid/blob/main/proposals/data-discovery.md#type-index-registry) in our current work.
 
 ## Future Type Index versions:
-...might build on top of this spec. We staretd collecting ideas on a dedicated [git ticket](https://github.com/solid/type-indexes/issues/1). If you want to start discussion on one of those ideas, feel free. In order to have them considered for future iterations of this document please label the ticket with `discussion` and `future iteration` please.
+...might build on top of this spec. We started collecting ideas on a dedicated [git ticket](https://github.com/solid/type-indexes/issues/1). If you want to start discussion on one of those ideas, feel free. In order to have them considered for future iterations of this document please label the ticket with `discussion` and `future iteration` please.
 
 ...might speak about other types of indexes, in their own dedicated repositories.
 
