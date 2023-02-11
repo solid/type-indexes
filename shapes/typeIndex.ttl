@@ -1,0 +1,29 @@
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX solid: <http://www.w3.org/ns/solid/terms#>
+PREFIX ldp: <http://www.w3.org/ns/ldp#>
+PREFIX : <#>
+
+:TypeIndexShape a sh:NodeShape ;
+    sh:targetClass solid:ListedDocument, solid:UnlistedDocument, solid:TypeIndex .
+
+:TypeRegistrationShape a sh:NodeShape ;
+    sh:targetClass solid:TypeRegistration ;
+    sh:property [
+        sh:path solid:forClass ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:predicate solid:instanceContainer ;
+        sh:class ldp:Container ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:predicate solid:instance ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
