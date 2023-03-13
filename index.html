@@ -203,7 +203,7 @@
     <main>
       <article about="" typeof="schema:Article doap:Specification">
         <h1 property="schema:name">Type Indexes</h1>
-        <h2>Version <span property="doap:revision">1.0.0</span>, Editor’s Draft, 2022-08-31</h2>
+        <h2>Version <span property="doap:revision">1.0.0</span>, Editor’s Draft, 2023-03-13</h2>
 
         <details open="">
           <summary>More details about this document</summary>
@@ -336,9 +336,9 @@
               <time
                 content="2020-08-31T00:00:00Z"
                 datatype="xsd:dateTime"
-                datetime="2022-08-31T00:00:00Z"
+                datetime="2023-03-13T00:00:00Z"
                 property="schema:datePublished"
-                >2022-08-31</time
+                >2023-03-13</time
               >
             </dd>
           </dl>
@@ -347,11 +347,11 @@
             <dt>Modified</dt>
             <dd>
               <time
-                content="2022-08-31T00:00:00Z"
+                content="2023-03-13T00:00:00Z"
                 datatype="xsd:dateTime"
-                datetime="2022-08-31T00:00:00Z"
+                datetime="2023-03-13T00:00:00Z"
                 property="schema:dateModified"
-                >2022-08-31</time
+                >2023-03-13</time
               >
             </dd>
           </dl>
@@ -659,7 +659,7 @@
                 <a href="https://github.com/solid/process">Solid process</a>.
                 However, the information in this document is still subject to
                 change. You are invited to
-                <a href="https://github.com/solid/webid-profile/issues"
+                <a href="https://github.com/solid/type-indexes/issues"
                   >contribute</a
                 >
                 any feedback, comments, or questions you might have.
@@ -707,24 +707,18 @@
                     <li>
                       <a href="#terminology"
                         ><span class="secno">1.1</span>
-                        <span class="content">Out of scope</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="#terminology"
-                        ><span class="secno">1.2</span>
                         <span class="content">Terminology</span></a
                       >
                     </li>
                     <li>
                       <a href="#namespaces"
-                        ><span class="secno">1.3</span>
+                        ><span class="secno">1.2</span>
                         <span class="content">Namespaces</span></a
                       >
                     </li>
                     <li>
                       <a href="#conformance"
-                        ><span class="secno">1.4</span>
+                        ><span class="secno">1.3</span>
                         <span class="content">Conformance</span></a
                       >
                     </li>
@@ -759,7 +753,7 @@
                     </li>
                     <li>
                       <a href="#supplying-missing-type-index-documents">
-                        <span class="secno">2.4</span>
+                        <span class="secno">3</span>
                         <span class="content"
                           >Supplying missing type index documents
                         </span></a
@@ -769,13 +763,13 @@
                 </li>
                 <li class="tocline">
                   <a href="#considerations"
-                    ><span class="secno">3</span>
+                    ><span class="secno">4</span>
                     <span class="content">Considerations</span></a
                   >
                   <ol>
                     <li>
                       <a class="tocxref" href="#privacy-considerations"
-                        ><span class="secno">3.1</span>
+                        ><span class="secno">4.1</span>
                         <span class="content">Privacy Considerations</span></a
                       >
                     </li>
@@ -783,6 +777,22 @@
                 </li>
                 <li class="tocline">
                   <a class="tocxref" href="#references">References</a>
+                  <ol>
+                    <li>
+                      <a class="tocxref" href="#Normative-References"
+                        >
+                        <span class="content">Normative References</span></a
+                      >
+                    </li>
+                  </ol>
+                  <ol>
+                    <li>
+                      <a class="tocxref" href="#Informative-References"
+                        >
+                        <span class="content">Informative References</span></a
+                      >
+                    </li>
+                  </ol>
                 </li>
               </ol>
             </div>
@@ -804,11 +814,11 @@
             <div datatype="rdf:HTML" property="schema:description">
               <p><em>This section is non-normative.</em></p>
               <p>
-                In the Solid ecosystem, storages and clients are loosely coupled. This means clients are tight to data models. Furthermore, clients and thus Pods should be able to be connected in a network of knowledge. The connection is only achievable if the data itself is easy to be interconnected. 
+                In the Solid ecosystem, storages and clients are loosely coupled. This means clients are tight to data models. Furthermore, clients and thus storages should be able to be connected in a network of knowledge. The connection is only achievable if the data itself is easy to be interconnected. 
 
-                This specification is written for Solid application developers as a solution that shows how to interconnect clients and data on Pods. This specification details the use of Type Indexes which were implemented already in different clients. Type Indexes offer a fine-grained approach to describing the location of specific types of resources on a Pod.
+                This specification is written for Solid application developers as a solution that shows how to interconnect clients and data on storages. This specification details the use of Type Indexes which were implemented already in different clients. Type Indexes offer a fine-grained approach to describing the location of specific types of resources on a storage.
 
-                This specification is accompanied with shape documents, SHACL and ShEx, to help developers improve their implementations and maximize the promise of interconnected data. 
+                This specification is accompanied with shape documents, <a href="#bib-schacl">[SHACL]</a> and <a href="#bib-shex">[ShEx]</a>, to help developers improve their implementations and maximize the promise of interconnected data. 
               </p>
             </div>
 
@@ -836,17 +846,17 @@
                     ></cite
                   >] and
                   <cite
-                    ><a href="https://solidproject.org/TR/wac"
-                      >Web Access Control</a
+                    ><a href="https://www.w3.org/2005/Incubator/webid/spec/identity/"
+                      >WebID</a
                     ></cite
                   >
-                  [<cite><a class="bibref" href="#bib-wac">WAC</a></cite
+                  [<cite><a class="bibref" href="#bib-webid">WebID</a></cite
                   >] specifications.
                 </p>
 
                 <p property="skos:definition">
                   The
-                  <cite>Solid WebID Profile</cite>
+                  <cite>WebId</cite>
                   specification defines the following terms. These terms are
                   referenced throughout this specification.
                 </p>
@@ -859,35 +869,38 @@
                 -->
 
                 <span rel="skos:hasTopConcept"
-                  ><span resource="#solid-profile"></span
-                  ><span resource="#extended-profile"></span
+                  ><span resource="#storage"></span
+                  ><span resource="#webid"></span
+                  ><span resource="#webid-profile"></span
                 ></span>
 
                 <dl>
                   <dt
-                    about="#solid-profile"
+                    about="#storage"
                     property="skos:prefLabel"
                     typeof="skos:Concept"
-                  >
-                    <dfn id="solid-profile">Solid Profile</dfn>
-                  </dt>
-                  <dd about="#solid-profile" property="skos:definition">
-                    A <dfn>Solid Profile</dfn> is...
+                  >Storage</dt>
+                  <dd>
+                    A <dfn id="storage">storage</dfn> is a space of URIs that affords agents controlled access to resources.
+                  </dd>
+                  <dt
+                    about="#webid"
+                    property="skos:prefLabel"
+                    typeof="skos:Concept"
+                  >WebID</dt>
+                  <dd>
+                    A <dfn id="webid">WebID</dfn> is a URI with an HTTP or HTTPS scheme which denotes an Agent (Person, Organization, Group, Device, etc.). For WebIDs with fragment identifiers (e.g. #me), the URI without the fragment denotes the Profile Document. For WebIDs without fragment identifiers an HTTP request on the WebID MUST return a 303 with a Location header URI referring to the Profile Document.
+                  </dd>
+                  <dt 
+                    about="#webid-profile" 
+                    property="skos:definition"
+                    typeof="skos:Concept"
+                  >WebID Profile</dt>
+                  <dd>
+                    A <dfn>WebID Profile</dfn> is an RDF document which uniquely describes the Agent denoted by the WebID in relation to that WebID. The server MUST provide a text/turtle <a href="#bib-turtle">[turtle]</a> representation of the requested profile. This document MAY be available in other RDF serialization formats, such as RDFa <a href="#bib-rdfa-core">[RDFA-CORE]</a>, or <a href="#bib-RDF-SYNTAX-GRAMMAR">[RDF-SYNTAX-GRAMMAR]</a> if so requested through content negotiation. 
                   </dd>
                 </dl>
 
-                <dl>
-                  <dt
-                    about="#extended-profile"
-                    property="skos:prefLabel"
-                    typeof="skos:Concept"
-                  >
-                    <dfn id="extended-profile">Solid Profile</dfn>
-                  </dt>
-                  <dd about="#extended-profile" property="skos:definition">
-                    An <dfn>extended profile</dfn> is...
-                  </dd>
-                </dl>
               </div>
             </section>
 
@@ -923,46 +936,17 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><code>rdfs</code></td>
-                      <td>http://www.w3.org/2000/01/rdf-schema</td>
-                      <td>
-                        [<cite
-                          ><a class="bibref" href="#bib-rdf-schema"
-                            >rdf-schema</a
-                          ></cite
-                        >]
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><code>ldp</code></td>
-                      <td>http://www.w3.org/ns/ldp#</td>
-                      <td>
-                        [<cite><a class="bibref" href="#bib-ldp">LDP</a></cite
-                        >]
-                      </td>
-                    </tr>
-                    <tr>
                       <td><code>solid</code></td>
                       <td>http://www.w3.org/ns/solid/terms#</td>
                       <td>Solid Terms</td>
                     </tr>
                     <tr>
-                      <td><code>pim</code></td>
-                      <td>http://www.w3.org/ns/pim/space#</td>
-                      <td>Workspace Ontology</td>
-                    </tr>
-                    <tr>
-                      <td><code>acl</code></td>
-                      <td>http://www.w3.org/ns/auth/acl#</td>
-                      <td>ACL Ontology</td>
-                    </tr>
-                    <tr>
-                      <td><code>dcterms</code></td>
-                      <td>http://purl.org/dc/terms/</td>
+                      <td><code>vcard</code></td>
+                      <td>http://www.w3.org/2006/vcard/ns#</td>
                       <td>
                         [<cite
-                          ><a class="bibref" href="#bib-dc-terms"
-                            >DC-TERMS</a
+                          ><a class="bibref" href="#bib-vcard"
+                            >VCARD</a
                           ></cite
                         >]
                       </td>
@@ -999,7 +983,8 @@
                 </p>
 
                 <p>
-                  Examples in this specification are introduced with the word "for example" or are set apart from the normative text with <pre><code>class="example"</code></pre>, like this:
+                  Examples in this specification are introduced with the word "for example" or are set apart from the normative text with <code>class="example"</code>, like this:
+                </p>
                   <figure
                     class="example listing"
                     id="example"
@@ -1007,7 +992,7 @@
                     resource="#example"
                   >
                     <p class="example-h">
-                      <span>Example x</span>
+                      <span>Example 1</span>
                     </p>
                     <pre
                       about="#example"
@@ -1018,7 +1003,6 @@
                     </pre>
                   </figure>
 
-                </p>
               </div>
             </section>
           </section>
@@ -1135,7 +1119,7 @@
                   resource="#public-type-index-example"
                 >
                   <p class="example-h">
-                    <span>Example</span>: Public Type Index that is a Listed
+                    <span>Example 1</span>: Public Type Index that is a Listed
                     Document.
                   </p>
                   <pre
@@ -1195,7 +1179,7 @@
                     resource="#private-type-index-example"
                   >
                     <p class="example-h">
-                      <span>Example</span>: Private Type Index that is an Unlisted
+                      <span>Example 2</span>: Private Type Index that is an Unlisted
                       Document.
                     </p>
                     <pre
@@ -1281,7 +1265,7 @@
                 If one or both of the Type Indexes are missing, an app
                 needing to write to them that doesn't have Write and Control
                 access to the root storage MAY warn the user that their indexes are
-                missing and that they should use a Pod Management App to fix
+                missing and that they should use a storage management App to fix
                 their profile.
               </p>
               <p>
@@ -1312,10 +1296,10 @@
           </section>  
 
           <section
-            id="supplying-missing-type-index-documents"
+            id="communities"
             inlist=""
             rel="schema:hasPart"
-            resource="#supplying-missing-type-index-documents"
+            resource="#communities"
             typeof="skos:ConceptScheme"
           >
             <h2 property="schema:name skos:prefLabel">
@@ -1341,7 +1325,6 @@
             </div>
           </section>
         
-          <!-- TODO: https://github.com/solid/webid-profile/issues/23 -->
           <section
             class="appendix"
             id="references"
@@ -1359,65 +1342,23 @@
               >
                 <h3 property="schema:name">Normative References</h3>
                 <div datatype="rdf:HTML" property="schema:description">
-                  <dl class="bibliography" resource="">
-                    <dt id="bib-dc-terms">[DC-TERMS]</dt>
+                  <dl class="bibliography" resource="#Normative-References">
+                    
+                    <dt id="bib-RDF-SYNTAX-GRAMMAR">[RDF-SYNTAX-GRAMMAR]</dt>
                     <dd>
                       <a
-                        href="http://dublincore.org/documents/2010/10/11/dcmi-terms/"
+                        href="https://www.w3.org/TR/rdf-schema/"
                         rel="cito:citesAsAuthority"
-                        ><cite>Dublin Core Metadata Terms, version 1.1</cite></a
-                      >. DCMI Usage Board. DCMI. 11 October 2010. DCMI
-                      Recommendation. URL:
-                      <a
-                        href="http://dublincore.org/documents/2010/10/11/dcmi-terms/"
-                        >http://dublincore.org/documents/2010/10/11/dcmi-terms/</a
-                      >
+                        ><cite>RDF-SYNTAX-GRAMMAR</cite></a
+                      >.  Fabien Gandon; Guus Schreiber. <a href="http://www.w3.org/TR/rdf-syntax-grammar/">RDF 1.1 XML Syntax</a>. 9 January 2014. W3C Proposed Edited Recommendation. URL: <a href="http://www.w3.org/TR/rdf-syntax-grammar/">http://www.w3.org/TR/rdf-syntax-grammar/</a>
                     </dd>
-                    <dt id="bib-fetch">[FETCH]</dt>
+                    <dt id="bib-rdfa-core">[RDFA-CORE]</dt>
                     <dd>
                       <a
-                        href="https://fetch.spec.whatwg.org/"
+                        href="https://www.w3.org/TR/rdf-schema/"
                         rel="cito:citesAsAuthority"
-                        ><cite>Fetch Standard</cite></a
-                      >. Anne van Kesteren. WHATWG. Living Standard. URL:
-                      <a href="https://fetch.spec.whatwg.org/"
-                        >https://fetch.spec.whatwg.org/</a
-                      >
-                    </dd>
-                    <dt id="bib-iana-media-types">[IANA-MEDIA-TYPES]</dt>
-                    <dd>
-                      <a
-                        href="https://www.iana.org/assignments/media-types/"
-                        rel="cito:citesAsAuthority"
-                        ><cite>Media Types</cite></a
-                      >. IANA. URL:
-                      <a href="https://www.iana.org/assignments/media-types/"
-                        >https://www.iana.org/assignments/media-types/</a
-                      >
-                    </dd>
-                    <dt id="bib-ldn">[LDN]</dt>
-                    <dd>
-                      <a
-                        href="https://www.w3.org/TR/ldn/"
-                        rel="cito:citesAsAuthority"
-                        ><cite>Linked Data Notifications</cite></a
-                      >. Sarven Capadisli; Amy Guy. W3C. 2 May 2017. W3C
-                      Recommendation. URL:
-                      <a href="https://www.w3.org/TR/ldn/"
-                        >https://www.w3.org/TR/ldn/</a
-                      >
-                    </dd>
-                    <dt id="bib-ldp">[LDP]</dt>
-                    <dd>
-                      <a
-                        href="https://www.w3.org/TR/ldp/"
-                        rel="cito:citesAsAuthority"
-                        ><cite>Linked Data Platform 1.0</cite></a
-                      >. Steve Speicher; John Arwe; Ashok Malhotra. W3C. 26
-                      February 2015. W3C Recommendation. URL:
-                      <a href="https://www.w3.org/TR/ldp/"
-                        >https://www.w3.org/TR/ldp/</a
-                      >
+                        ><cite>RDFA-CORE</cite></a
+                      >.  Ben Adida; Mark Birbeck; Shane McCarron; Ivan Herman et al. <a href="http://www.w3.org/TR/rdfa-core/">RDFa Core 1.1</a> - Second Edition. 22 August 2013. W3C Recommendation. URL: <a href="http://www.w3.org/TR/rdfa-core/">http://www.w3.org/TR/rdfa-core/</a>
                     </dd>
                     <dt id="bib-rdf-schema">[RDF-SCHEMA]</dt>
                     <dd>
@@ -1429,18 +1370,6 @@
                       W3C Recommendation. URL:
                       <a href="https://www.w3.org/TR/rdf-schema/"
                         >https://www.w3.org/TR/rdf-schema/</a
-                      >
-                    </dd>
-                    <dt id="bib-rdf11-concepts">[RDF11-CONCEPTS]</dt>
-                    <dd>
-                      <a
-                        href="https://www.w3.org/TR/rdf11-concepts/"
-                        rel="cito:citesAsAuthority"
-                        ><cite>RDF 1.1 Concepts and Abstract Syntax</cite></a
-                      >. Richard Cyganiak; David Wood; Markus Lanthaler. W3C. 25
-                      February 2014. W3C Recommendation. URL:
-                      <a href="https://www.w3.org/TR/rdf11-concepts/"
-                        >https://www.w3.org/TR/rdf11-concepts/</a
                       >
                     </dd>
                     <dt id="bib-rfc2119">[RFC2119]</dt>
@@ -1458,62 +1387,6 @@
                         >https://datatracker.ietf.org/doc/html/rfc2119</a
                       >
                     </dd>
-                    <dt id="bib-rfc3986">[RFC3986]</dt>
-                    <dd>
-                      <a
-                        href="https://datatracker.ietf.org/doc/html/rfc3986"
-                        rel="cito:citesAsAuthority"
-                        ><cite
-                          >Uniform Resource Identifier (URI): Generic
-                          Syntax</cite
-                        ></a
-                      >. T. Berners-Lee; R. Fielding; L. Masinter. IETF. January
-                      2005. Internet Standard. URL:
-                      <a href="https://datatracker.ietf.org/doc/html/rfc3986"
-                        >https://datatracker.ietf.org/doc/html/rfc3986</a
-                      >
-                    </dd>
-                    <dt id="bib-rfc6454">[RFC6454]</dt>
-                    <dd>
-                      <a
-                        href="https://datatracker.ietf.org/doc/html/rfc6454"
-                        rel="cito:citesAsAuthority"
-                        ><cite>The Web Origin Concept</cite></a
-                      >. A. Barth. IETF. December 2011. Proposed Standard. URL:
-                      <a href="https://datatracker.ietf.org/doc/html/rfc6454"
-                        >https://datatracker.ietf.org/doc/html/rfc6454</a
-                      >
-                    </dd>
-                    <dt id="bib-rfc7230">[RFC7230]</dt>
-                    <dd>
-                      <a
-                        href="https://httpwg.org/specs/rfc7230.html"
-                        rel="cito:citesAsAuthority"
-                        ><cite
-                          >Hypertext Transfer Protocol (HTTP/1.1): Message
-                          Syntax and Routing</cite
-                        ></a
-                      >. R. Fielding, Ed.; J. Reschke, Ed.. IETF. June 2014.
-                      Proposed Standard. URL:
-                      <a href="https://httpwg.org/specs/rfc7230.html"
-                        >https://httpwg.org/specs/rfc7230.html</a
-                      >
-                    </dd>
-                    <dt id="bib-rfc7231">[RFC7231]</dt>
-                    <dd>
-                      <a
-                        href="https://httpwg.org/specs/rfc7231.html"
-                        rel="cito:citesAsAuthority"
-                        ><cite
-                          >Hypertext Transfer Protocol (HTTP/1.1): Semantics and
-                          Content</cite
-                        ></a
-                      >. R. Fielding, Ed.; J. Reschke, Ed.. IETF. June 2014.
-                      Proposed Standard. URL:
-                      <a href="https://httpwg.org/specs/rfc7231.html"
-                        >https://httpwg.org/specs/rfc7231.html</a
-                      >
-                    </dd>
                     <dt id="bib-rfc8174">[RFC8174]</dt>
                     <dd>
                       <a
@@ -1528,18 +1401,6 @@
                         >https://datatracker.ietf.org/doc/html/rfc8174</a
                       >
                     </dd>
-                    <dt id="bib-solid-oidc">[SOLID-OIDC]</dt>
-                    <dd>
-                      <a
-                        href="https://solidproject.org/TR/oidc"
-                        rel="cito:citesAsAuthority"
-                        ><cite>SOLID-OIDC</cite></a
-                      >. Aaron Coburn; elf Pavlik; Dmitri Zagidulin. W3C Solid
-                      Community Group. 28 March 2022. Version 0.1.0. URL:
-                      <a href="https://solidproject.org/TR/oidc"
-                        >https://solidproject.org/TR/oidc</a
-                      >
-                    </dd>
                     <dt id="bib-solid-protocol">[SOLID-PROTOCOL]</dt>
                     <dd>
                       <a
@@ -1548,36 +1409,34 @@
                         ><cite>Solid Protocol</cite></a
                       >. Sarven Capadisli; Tim Berners-Lee; Ruben Verborgh;
                       Kjetil Kjernsmo. W3C Solid Community Group. 17 December
-                      2021. Version 0.9.0. URL:
+                      2021. Version 1.0.0. URL:
                       <a href="https://solidproject.org/TR/protocol"
                         >https://solidproject.org/TR/protocol</a
                       >
                     </dd>
-                    <dt id="bib-wac">[WAC]</dt>
+                    <dt id="bib-turtle">[turtle]</dt>
                     <dd>
                       <a
-                        href="https://solidproject.org/TR/wac"
+                        href="http://www.w3.org/TR/turtle/"
                         rel="cito:citesAsAuthority"
-                        ><cite>Web Access Control</cite></a
-                      >. Sarven Capadisli. W3C Solid Community Group. 11 July
-                      2021. Draft. URL:
-                      <a href="https://solidproject.org/TR/wac"
-                        >https://solidproject.org/TR/wac</a
-                      >
+                        ><cite>turtle</cite></a
+                      >. Eric Prud'hommeaux; Gavin Carothers. <a href="https://www.w3.org/TR/turtle/">RDF 1.1 Turtle</a>. 9 January 2014. W3C Proposed Recommendation. URL: <a href="http://www.w3.org/TR/turtle/">http://www.w3.org/TR/turtle/</a>
                     </dd>
-                    <dt id="bib-webarch">[WEBARCH]</dt>
+                    <dt id="bib-shacl">[SHACL]</dt>
                     <dd>
                       <a
-                        href="https://www.w3.org/TR/webarch/"
+                        href="http://www.w3.org/TR/turtle/"
                         rel="cito:citesAsAuthority"
-                        ><cite
-                          >Architecture of the World Wide Web, Volume One</cite
-                        ></a
-                      >. Ian Jacobs; Norman Walsh. W3C. 15 December 2004. W3C
-                      Recommendation. URL:
-                      <a href="https://www.w3.org/TR/webarch/"
-                        >https://www.w3.org/TR/webarch/</a
-                      >
+                        ><cite>SCHACL</cite></a
+                      >. Holger Knublauch; Dimitris Kontokostas. <a href="https://www.w3.org/TR/shacl/">Shapes Constraint Language (SHACL)</a>. 20 July 2017. REC. URL: <a href="https://www.w3.org/TR/shacl/">https://www.w3.org/TR/shacl/</a>
+                    </dd>
+                    <dt id="bib-shex">[ShEx]</dt>
+                    <dd>
+                      <a
+                        href="http://www.w3.org/TR/turtle/"
+                        rel="cito:citesAsAuthority"
+                        ><cite>ShEx</cite></a
+                      >. Eric Prud'hommeaux; et al. <a href="http://shex.io/shex-semantics/index.html">Shape Expressions Language 2.1</a>. URL: <a href="http://shex.io/shex-semantics/index.html">http://shex.io/shex-semantics/index.html</a>
                     </dd>
                     <dt id="bib-webid">[WEBID]</dt>
                     <dd>
@@ -1604,7 +1463,7 @@
               >
                 <h3 property="schema:name">Informative References</h3>
                 <div datatype="rdf:HTML" property="schema:description">
-                  <dl class="bibliography" resource="">
+                  <dl class="bibliography" resource="#Informative-References">
                     <dt id="bib-coga-usable">[COGA-USABLE]</dt>
                     <dd>
                       <a
