@@ -637,7 +637,7 @@
           <section id="abstract">
             <h2>Abstract</h2>
             <div datatype="rdf:HTML" property="schema:abstract">
-              
+              Type Indexes is a data discovery mechanism where coarse-grained library types are registered providing a way for applications to discover where an agent keeps data relevant for the application.
             </div>
           </section>
 
@@ -707,18 +707,24 @@
                     <li>
                       <a href="#terminology"
                         ><span class="secno">1.1</span>
+                        <span class="content">Out of scope</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#terminology"
+                        ><span class="secno">1.2</span>
                         <span class="content">Terminology</span></a
                       >
                     </li>
                     <li>
                       <a href="#namespaces"
-                        ><span class="secno">1.2</span>
+                        ><span class="secno">1.3</span>
                         <span class="content">Namespaces</span></a
                       >
                     </li>
                     <li>
                       <a href="#conformance"
-                        ><span class="secno">1.3</span>
+                        ><span class="secno">1.4</span>
                         <span class="content">Conformance</span></a
                       >
                     </li>
@@ -761,6 +767,23 @@
                     </li>
                   </ol>
                 </li>
+                <li class="tocline">
+                  <a href="#considerations"
+                    ><span class="secno">3</span>
+                    <span class="content">Considerations</span></a
+                  >
+                  <ol>
+                    <li>
+                      <a class="tocxref" href="#privacy-considerations"
+                        ><span class="secno">3.1</span>
+                        <span class="content">Privacy Considerations</span></a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li class="tocline">
+                  <a class="tocxref" href="#references">References</a>
+                </li>
               </ol>
             </div>
           </nav>
@@ -779,7 +802,14 @@
               Introduction
             </h2>
             <div datatype="rdf:HTML" property="schema:description">
-              ...
+              <p><em>This section is non-normative.</em></p>
+              <p>
+                In the Solid ecosystem, storages and clients are loosely coupled. This means clients are tight to data models. Furthermore, clients and thus Pods should be able to be connected in a network of knowledge. The connection is only achievable if the data itself is easy to be interconnected. 
+
+                This specification is written for Solid application developers as a solution that shows how to interconnect clients and data on Pods. This specification details the use of Type Indexes which were implemented already in different clients. Type Indexes offer a fine-grained approach to describing the location of specific types of resources on a Pod.
+
+                This specification is accompanied with shape documents, SHACL and ShEx, to help developers improve their implementations and maximize the promise of interconnected data. 
+              </p>
             </div>
 
             <section
@@ -966,6 +996,28 @@
                     ><a class="bibref" href="#bib-rfc8174">RFC8174</a></cite
                   >] when, and only when, they appear in all capitals, as shown
                   here.
+                </p>
+
+                <p>
+                  Examples in this specification are introduced with the word "for example" or are set apart from the normative text with <pre><code>class="example"</code></pre>, like this:
+                  <figure
+                    class="example listing"
+                    id="example"
+                    rel="schema:hasPart"
+                    resource="#example"
+                  >
+                    <p class="example-h">
+                      <span>Example x</span>
+                    </p>
+                    <pre
+                      about="#example"
+                      property="schema:description"
+                      typeof="fabio:Script"
+                    >
+                      <code>This is an example.</code>
+                    </pre>
+                  </figure>
+
                 </p>
               </div>
             </section>
