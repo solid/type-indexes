@@ -1301,7 +1301,6 @@
               <div class="note" id="cors-protocol-blocking" inlist="" rel="schema:hasPart" resource="#cors-protocol-blocking">
                 <h4 property="schema:name"><span>Note</span>: Missing pointer to Type Indexes</h4>
                 <div datatype="rdf:HTML" property="schema:description">
-<<<<<<< HEAD
                 <p>
                   If the Type Index files are created but the pointer to
                   them are not stored, the risk is that new resource get created, leading to
@@ -1323,41 +1322,6 @@
               Communities
             </h2>
             <div datatype="rdf:HTML" property="schema:description">
-=======
-                  <p>
-                    If one or both of the type indexes are missing, an app
-                    needing to write to them that doesn't have Write and Control
-                    access to the pod MAY warn the user that their indexes are
-                    missing and that they should use a Pod Management App to fix
-                    their profile.
-                  </p>
-                  <p>
-                    If one or both of the type index documents are missing and
-                    the app does have Write and Control access to the pod, the
-                    app MAY create documents. The public type index document
-                    SHOULD be publicly readable, writable by the user (or a
-                    group delegated by the user), and a pointer to it MUST be
-                    placed in the WebID Profile Document. The private type index
-                    SHOULD be readable and writeable only by the WebID owner and
-                    a pointer to it MUST be placed in the Preferences Document.
-                  </p>
-                  <p>
-                    (Note if the type index file is created but the pointer to
-                    it not stored, then this risks, on a future occasion,
-                    another separate empty resource being created, leading to
-                    confusion and possible loss of data.)
-                  </p>
-
-            <section
-              id="supplying-missing-type-index-documents"
-              inlist=""
-              rel="schema:hasPart"
-              resource="#supplying-missing-type-index-documents"
-              typeof="skos:ConceptScheme"
-            >
-              <h2>Communities</h2>
-              <div datatype="rdf:HTML" property="schema:description"></div>
->>>>>>> main
               <p>
                 <i
                   >Note: This section is "at risk" in that is more recent
