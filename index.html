@@ -347,11 +347,11 @@
             <dt>Modified</dt>
             <dd>
               <time
-                content="2023-03-13T00:00:00Z"
+                content="2023-03-15T00:00:00Z"
                 datatype="xsd:dateTime"
-                datetime="2023-03-13T00:00:00Z"
+                datetime="2023-03-15T00:00:00Z"
                 property="schema:dateModified"
-                >2023-03-13</time
+                >2023-03-15</time
               >
             </dd>
           </dl>
@@ -761,15 +761,23 @@
                     </span></a
                   >
                 </li>
+                <li>
+                  <a href="#supplying-missing-type-index-documents">
+                    <span class="secno">4</span>
+                    <span class="content"
+                      >Community
+                    </span></a
+                  >
+                </li>
                 <li class="tocline">
                   <a href="#considerations"
-                    ><span class="secno">4</span>
+                    ><span class="secno">5</span>
                     <span class="content">Considerations</span></a
                   >
                   <ol>
                     <li>
                       <a class="tocxref" href="#privacy-considerations"
-                        ><span class="secno">4.1</span>
+                        ><span class="secno">5.1</span>
                         <span class="content">Privacy Considerations</span></a
                       >
                     </li>
@@ -1289,7 +1297,7 @@
             typeof="skos:ConceptScheme"
           >
             <h2 property="schema:name skos:prefLabel">
-              Communities
+              Community
             </h2>
             <div datatype="rdf:HTML" property="schema:description">
               <p>
@@ -1299,7 +1307,7 @@
                 </i>
               </p>
               <p>
-                Type Indexes help find specific types of data in a owner's storage. They connect data to storage locations. Communities connect a WebID owner to a project or organization. This connection is created to specify the membership of a WebID owner to the project or/and organization. </p>
+                Type Indexes help find specific types of data in a owner's storage. They connect data to storage locations. Through the use of a community a WebID owner connects to a project or/and an organization. This connection is created to specify the membership of a WebID owner to the project or/and organization. </p>
               <p>
                 A WebID owner is part of a project or/and organization if a specific triple is found in either the Public or Private Type Index Document.
                 The triple must have the WebID of the individual as the subject, the <code>solid:community</code> as the predicate and the WebId or the project or organization as an object. 
@@ -1322,6 +1330,34 @@
                 </pre>
               </figure>
                 
+            </div>
+          </section>
+
+          <section
+            id="considerations"
+            inlist=""
+            rel="schema:hasPart"
+            resource="#considerations"
+            typeof="skos:ConceptScheme"
+          >
+            <h2 property="schema:name skos:prefLabel">
+              Considerations
+            </h2>
+            <div datatype="rdf:HTML" property="schema:description">
+              <section
+                id="privacy-considerations"
+                inlist=""
+                rel="schema:hasPart"
+                resource="#privacy-considerations"
+              >
+                <h3 property="schema:name">Privacy considerations</h3>
+                <div datatype="rdf:HTML" property="schema:description">
+                  <p><em>This section is non-normative.</em></p>
+                  <p>
+                    Privacy considerations have been voiced in the past regarding the visibility of different data types in the Public Type Index Document. One can potentially deduce the type of data a WebID owner possesses on their storage.
+                  </p>
+                </div>
+                </section>
             </div>
           </section>
         
