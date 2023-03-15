@@ -1294,20 +1294,34 @@
             <div datatype="rdf:HTML" property="schema:description">
               <p>
                 <i
-                  >Note: This section is "at risk" in that is more recent
-                  and less tested than the rest of this spec.
+                  >Note: This section is "at risk" in that it is more recent
+                  and less tested than the rest of this specification.
                 </i>
               </p>
               <p>
-                A user may use not only their own type indexes to find and
-                remember things, but also may use the type indexes of users
-                which are organizations, such as projects, to which they are
-                affiliated. To enable this, a triple
-                <code>{user} solid:community {org} . </code> is placed in
-                either the user's private preferences or public profile. The
-                <code>org</code> node's URI is the WebID URI of the project,
-                etc.
-              </p>
+                Type Indexes help find specific types of data in a owner's storage. They connect data to storage locations. Communities connect a WebID owner to a project or organization. This connection is created to specify the membership of a WebID owner to the project or/and organization. </p>
+              <p>
+                A WebID owner is part of a project or/and organization if a specific triple is found in either the Public or Private Type Index Document.
+                The triple must have the WebID of the individual as the subject, the <code>solid:community</code> as the predicate and the WebId or the project or organization as an object. 
+                </p>
+                <figure
+                    class="example listing"
+                    id="example"
+                    rel="schema:hasPart"
+                    resource="#example"
+                  >
+                <p class="example-h">
+                  <span>Example 3</span>: An individual is part of a project or/and organization triple
+                </p>
+                <pre
+                  about="#example"
+                  property="schema:description"
+                  typeof="fabio:Script"
+                >
+                  <code>&lt;#WebID&gt; &lt;http://www.w3.org/ns/solid/terms#community&gt; &lt;http://webIDofProjectOrOrganization.example&gt; .</code>
+                </pre>
+              </figure>
+                
             </div>
           </section>
         
