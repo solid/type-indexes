@@ -821,8 +821,26 @@
               <p>
                 In the Solid ecosystem, storages and clients are loosely coupled. This means clients are tight to data models. Furthermore, clients and thus storages should be able to be connected in a network of knowledge. The connection is only achievable if the data itself is easy to be interconnected. 
 
-                This specification is written for Solid application developers as a solution that shows how to interconnect clients and data on storages. This specification details the use of Type Indexes which were implemented already in different clients. Type Indexes offer a fine-grained approach to describing the location of specific types of resources on a storage.
-
+                This specification is written for Solid application developers as a solution that shows how to interconnect clients and data on storages. This specification details the use of Type Indexes which were implemented already in different clients.
+                Type Indexes offer a first step, high level approach to describing the location of specific types of resources on a storage.
+              </p>
+              <p>
+                The type indexes are high-level in that they typically point not to individual resources like photos, audio files, or issues, but 
+                to the high level structures like Photo Libraries, Music Libraries, Issue Trackers which then keep track of the  individual resources
+                within each system.  Typically, each Library has its own <em>domain specific index</em>, which 
+                indexes in a way specific to that application. Here are some putative examples (though some have running code)
+                 to give an idea of how this works in general.
+              </p>
+              <table>
+                <tr><th>Library</th><th>Item</th><th>Indexed by, say,</th></tr>
+                <tr><td>Music Library</td><td>Song, Playlist</td><td>Arists, Album, Genre</td></tr>
+                <tr><td>Issue Tracker</td><td>Issue</td><td>Date, Status, Category, Assignee, Owner</td></tr>
+                <tr><td>Address Book</td><td>Contact, Group</td><td>Name, email, group</td></tr>
+                <tr><td>Photo Library</td><td>Photo</td><td>Date, Aperture, Focal Length, Location</td></tr>
+                <tr><td>Cookbook</td><td>Recipe</td><td>Ingredients, Preparation time,...</td></tr>
+                
+              </table>
+              <p>
                 This specification is accompanied with shape documents, <a href="#bib-shacl">[SHACL]</a> and <a href="#bib-shex">[ShEx]</a>, to help developers improve their implementations and maximize the promise of interconnected data. 
               </p>
             </div>
@@ -1122,7 +1140,7 @@
                     <code></code>
                     <code>&lt;#ab09fd&gt; a solid:TypeRegistration;</code>
                     <code>  solid:forClass vcard:AddressBook;</code>
-                    <code>  solid:instance &lt;/public/contacts/myPublicAddressBook.ttl&gt;.</code>
+                    <code>  solid:instance &lt;/public/contacts/myPublicAddressBook.ttl#this&gt;.</code>
                     <code></code>
                     <code>&lt;#bq1r5e&gt; a solid:TypeRegistration;</code>
                     <code>  solid:forClass bk:Bookmark;</code>
@@ -1132,7 +1150,7 @@
                     Type registration containing a public resource of type
                     <code>vcard:AddressBook</code>
                     located at the resource address
-                    <code>&lt;/public/contacts/myPublicAddressBook.ttl&gt;</code>.
+                    <code>&lt;/public/contacts/myPublicAddressBook.ttl#this&gt;</code>.
                     And a resources of type <code>bk:Bookmark</code> located in the
                     container address <code>&lt;/public/myBookmarks/&gt;</code>.
                   </figcaption>
